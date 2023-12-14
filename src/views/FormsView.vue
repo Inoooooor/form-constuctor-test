@@ -23,16 +23,12 @@
             color="primary"
           >
             <v-tab
+              v-for="tab in tabNames"
+              :key="tab.id"
               hide-slider
               class="text-none"
-              value="forms"
-              >Формы</v-tab
-            >
-            <v-tab
-              class="text-none"
-              hide-slider
-              value="users"
-              >Пользователи</v-tab
+              :value="tab.value"
+              >{{ tab.name }}</v-tab
             >
           </v-tabs>
         </v-sheet>
@@ -114,6 +110,19 @@
 <script setup>
 import { ref } from "vue"
 const tab = ref(null)
+
+const tabNames = [
+  {
+    id: 1,
+    value: "forms",
+    name: "Формы",
+  },
+  {
+    id: 2,
+    value: "users",
+    name: "Пользователи",
+  },
+]
 </script>
 <style scoped lang="scss">
 .form-nav-block {

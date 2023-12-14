@@ -46,7 +46,7 @@ import { RouterLink } from "vue-router"
               width="160"
               height="50"
               rounded="lg"
-              class="text-[16px]"
+              class="text-[16px] text-none"
               >Вход
             </v-btn>
           </router-link>
